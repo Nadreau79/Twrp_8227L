@@ -1,1 +1,1 @@
-PRODUCT+MAKEFILES := $(LOCAL_DIR)/omni_${_FF_5000_}.mk
+PRODUCT+MAKEFILES := $(LOCAL_DIR)/omni_${_REL_}.mk
