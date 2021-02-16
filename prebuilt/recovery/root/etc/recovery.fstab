@@ -1,0 +1,37 @@
+# mount point	fstype    device    	[device2]
+Flags
+
+/android      emmc        /dev/block/platform/soc/11230000.mmc/by-name/ANDROID       /dev/block/mmcblk0p24      flags=display="Android";backup=1;flashimg=1
+/Arm2         emmc        /dev/block/platform/soc/11230000.mmc/by-name/ARM2          /dev/block/mmcblk0p9       flags=display"Arm2";backup=1;flashimg=1
+/bootimg      emmc        /dev/block/platform/soc/11230000.mmc/by-name/BOOTIMG       /dev/block/mmcblk0p10      flags=display="Boot";backup=1;flashimg=1
+/cache        ext4        /dev/block/platform/soc/11230000.mmc/by-name/CACHE         /dev/block/mmcblk0p25     flags=display="Cache";canbewiped;wipeingui;wipeduringfactoryreset
+/recovery     emmc        /dev/block/platform/soc/11230000.mmc/by-name/RECOVERY      /dev/block/mmcblk0p11      flags=display="Recovery";backup=1;flashimg=1
+/system       ext4        /dev/block/platform/soc/11230000.mmc/by-name/SYSTEM        /dev/block/mmcblk0p20     flags=display="System";backup=1;canbewiped;wipeingui
+/vendor		  ext4		  /dev/block/platform/soc/11230000.mmc/by-name/VENDOR		 /dev/block/mmcblk0p19	   flags=display="Vendor";backup=1;flashimg=1
+/user_data    ext4        /dev/block/platform/soc/11230000.mmc/by-name/USERDATA      /dev/block/mmcblk0p26     flags=length=-16384;display="Data";backup=1;canbewiped;wipeingui;wipeduringfactoryreset;settingsstorage;encryptable=/dev/block/platform/soc/11230000.mmc/by-name/METADATA
+
+
+/logo         emmc        /dev/block/platform/soc/11230000.mmc/by-name/LOGO          /dev/block/mmcblk0p14      flags=display="Logo";backup=1;flashimg=1
+/nvram        emmc        /dev/block/platform/soc/11230000.mmc/by-name/NVRAM         /dev/block/mmcblk0p2      flags=display="NvRAM";backup=1;flashimg=1
+/nvdata       ext4        /dev/block/platform/soc/11230000.mmc/by-name/NVDATA        /dev/block/mmcblk0p18     flags=display="NvData";backup=1;flashimg=1
+/metazone     emmc        /dev/block/platform/soc/11230000.mmc/by-name/METAZONE      /dev/block/mmcblk0p17
+
+/external_sd  vfat        /dev/block/mmcblk1p1           /dev/block/mmcblk1                     flags=display="Micro SDcard";storage;wipeingui;removable;settingsstorage;backup=0;encryptable=userdata
+/usbotg       vfat        /dev/block/sda1                /dev/block/sda                         flags=display="USB-OTG";backup=0;wipeingui;storage;removable
+auto          vfat        /devices/soc/11230000.mmc*                   defaults        voldmanaged=sdcard0:auto
+auto          vfat        /devices/soc/11240000.msdc1*                   defaults        voldmanaged=sdcard1:auto;noemulatedsd;encryptable=userdata
+auto          vfat        /devices/platform/mt_usb*                             defaults        voldmanaged=usb-otg:auto
+
+/lk           emmc        /dev/block/platform/soc/11230000.mmc/by-name/lk            /dev/block/mmcblk0p6      flags=display="Uboot";backup=1;flashimg=1
+/proinfo      emmc        /dev/block/platform/soc/11230000.mmc/by-name/proinfo       /dev/block/mmcblk0p1      flags=display="Proinfo";backup=1
+/protect_f    ext4        /dev/block/platform/soc/11230000.mmc/by-name/protect_f      /dev/block/mmcblk0p3      flags=display="Protect_F";backup=1
+/protect_s    ext4        /dev/block/platform/soc/11230000.mmc/by-name/protect_s      /dev/block/mmcblk0p4      flags=display="Protect_S";backup=1
+/misc         emmc        /dev/block/platform/soc/11230000.mmc/by-name/misc          /dev/block/mmcblk0p13      flags=display="Parametr";backup=1
+/DKB          emmc        /dev/block/platform/soc/11230000.mmc/by-name/DKB            /dev/block/mmcblk0p22     flags=display="DKB";backup=1
+/sec_ro       emmc        /dev/block/platform/soc/11230000.mmc/by-name/sec_ro         /dev/block/mmcblk0p12     flags=display="Secro";backup=1;flashimg=1
+/tee1         emmc        /dev/block/platform/soc/11230000.mmc/by-name/tee1          /dev/block/mmcblk0p7     flags=display="Tee1";backup=1;flashimg=1
+/tee2         emmc        /dev/block/platform/soc/11230000.mmc/by-name/tee2          /dev/block/mmcblk0p8     flags=display="Tee2";backup=1;flashimg=1
+/persistent   emmc        /dev/block/platform/soc/11230000.mmc/by-name/frp           /dev/block/mmcblk0p23     flags=display="Frp";backup=1
+/expdb        emmc        /dev/block/platform/soc/11230000.mmc/by-name/expdb         /dev/block/mmcblk0p20
+/seccfg       emmc        /dev/block/platform/soc/11230000.mmc/by-name/seccfg        /dev/block/mmcblk0p5
+/forfanzone   emmc        /dev/block/platform/soc/11230000.mmc/by-name/forfanzone     /dev/block/mmcblk0p15
